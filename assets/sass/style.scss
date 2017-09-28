@@ -1,0 +1,217 @@
+/*
+Theme Name: Tainacan Child
+Theme URI: https://github.com/l3pufg/tainacan
+Description: Tainacan - um projeto sociocultural em parceria da UFG com o MinC
+Author: L3P UFG
+Author URI: http://www.l3p.fic.ufg.br/
+Template: tainacan
+Version: 1.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Tags: tainacan, ufg, minc, cultura, flexible, open_source
+Text Domain: tainacan-child
+
+This theme, like WordPress, is licensed under the GPL.
+Use it to make something cool, have fun, and share what you've learned with others.
+*/
+
+@mixin set-home-title-color($name) {
+  h4 {
+    border-left: 4px solid;
+    border-color: $name;
+  }
+}
+$populars: #77a6ce;
+$recents: #CAAD5B;
+$videos: #368B53;
+$images: #91597D;
+$pdfs: #874A1D;
+$texts: #BDD5B2;
+$audios: #7654A0;
+
+body{
+    &.home{
+        background: rgb(82, 86, 89) !important;
+
+        .navbar{
+            .container{
+                background: rgba(0, 0, 0, 0.60);
+            }
+        }
+        header{
+            height: 80vh;
+            &.banner{
+                background-image: url(assets/capafilmecultura52frente.jpg);
+                background-position: top center;
+                background-size: 100% 250% !important;
+                @media only screen {
+                    @media (max-width: 768px){
+                        background-size: 100% 105% !important;
+                    }
+                }
+                .especificacao{
+                    background-color: rgba(0, 0, 0, 0.48);
+                    color: #fff;
+                    padding: 2%;
+                    position: absolute;
+                    right: 13%;
+                    top: 30%;
+                    width: 33%;
+                    @media only screen {
+                        @media (max-width: 767px){ 
+                            right: 0;       
+                            font-size: xx-small;
+                            width: 70%;
+                        }
+                        @media (width: 768px){  
+                            width: 70%;
+                            right: 0;
+                        }
+                        @media (width: 1024px) and (height: 1366px){
+                            right: 2.6%;
+                        }
+                    }
+                    .title{
+                        color: #fff;
+                        font: {
+                            size: 3em;
+                            weight: 900;
+                        }
+                        margin-bottom: -15px;
+                    }
+                    .sub-title{
+                        color: #fff;
+                        font: {
+                            size: 1.7em;
+                        }
+                    }
+                }
+            }
+        }
+        #display_view_main_page_ {
+            background: rgb(230, 231, 232) !important;
+            padding: 30px 25px 0 23px !important;
+            margin-top: 0 !important;
+            h4{
+                color: black !important;
+            }
+            .type-container {
+                padding-left: 13px;
+                padding-right: 0;
+            }
+
+            .featured {
+                padding: 0;
+                width: 215px !important;
+                &:first-child {
+                    @include set-home-title-color($populars);
+                }
+                &:nth-child(2) {
+                    @include set-home-title-color($recents);
+                }
+            } // featured home items
+
+            .image {
+                @include set-home-title-color($images);
+            }
+
+            .video {
+                @include set-home-title-color($videos);
+            }
+
+            .pdf {
+                @include set-home-title-color($pdfs);
+            }
+
+            .audio {
+                @include set-home-title-color($audios);
+            }
+
+            .text {
+                @include set-home-title-color($texts);
+            }
+
+            .home-title {
+                text-align: center;
+                padding: 4px 3px;
+            }
+
+            .home-type-title {
+                color: white;
+                text-align: left;
+                padding-left: 8px;
+                margin: 0 0 20px 0;
+            }
+        }
+        .carousel-home {
+            .item-box-container {
+                display: inline-block;
+            }
+            
+            .panel {
+                width: 190px;
+                height: 215px;
+                background: #f5f5f5;
+
+                .panel-body {
+                    // padding: 10px !important;
+                    height: 178px;
+                    background: white;
+                    padding: 0;
+                    a {
+                        img {
+                            width: 100%;
+                            max-height: 100%;
+                            margin: 0 auto;
+                        }
+                    }
+
+                    span {
+                        .collection-name {
+                            font-size: 15px;
+                        }
+                    }
+
+                } // .panel-body
+
+                .panel-footer {
+                    height: auto;
+                    overflow: hidden;
+                }
+
+            } // .panel
+
+            button {
+                height: 216px;
+                width: 41px;
+
+                &.slick-prev, &.slick-next {
+                    top: 4%;
+                    z-index: 2;
+
+                    &:before {
+                    content: '';
+                    }
+                }
+
+                &.slick-prev {
+                    left: 0;
+                    border-radius: 4px 0 0 10px;
+                    background: url(assets/images/seta-left.png) no-repeat;
+                }
+
+                &.slick-next {
+                    right: 0;
+                    border-radius: 0 4px 10px 0;
+                    background: url(assets/images/seta.png) no-repeat;
+                    @media only screen {
+                        @media (min-width: 768px){
+                            right: -9px;
+                        }
+                    }
+                }
+
+            }
+        } // carousel home
+    }
+}
