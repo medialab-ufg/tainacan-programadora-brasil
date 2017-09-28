@@ -39,15 +39,12 @@ get_header();
  } else { ?>
 
     <div id="display_view_main_page_" class="container">
-        
+        <h4 class="home-type-title">Itens em Destaque</h4>
         <div class="home-container carousel-home">
 
             <?php 
-                $child_items = [
-                        'title' => 'Itens em destaque',
-                        'data' => wp_get_recent_posts( [ 'post_type' => 'socialdb_object', 'numberposts' => -1] )
-                ];
-            foreach ($child_items['data'] as $item):
+                $child_items =  wp_get_recent_posts( [ 'post_type' => 'socialdb_object', 'numberposts' => -1] );
+            foreach ($child_items as $item):
                 if ( is_array($item) && !empty($item) ):
                     ?>
                     <div class="col-md-12 col-sm-12 featured" style="width: 215px !important;">

@@ -92,6 +92,12 @@ body{
             background: rgb(230, 231, 232) !important;
             padding: 30px 25px 0 23px !important;
             margin-top: 0 !important;
+            .home-type-title {
+                &:first-child{
+                    border-left: 4px solid;
+                    border-color: #77a6ce;
+                }
+            }
             h4{
                 color: black !important;
             }
@@ -101,7 +107,6 @@ body{
             }
 
             .featured {
-                padding: 0;
                 width: 215px !important;
                 &:first-child {
                     @include set-home-title-color($populars);
