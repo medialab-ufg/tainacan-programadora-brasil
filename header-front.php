@@ -46,9 +46,8 @@ $_header_enabled = get_post_meta($collection_id, 'socialdb_collection_show_heade
             <meta name="thumbnail_url" content="<?php echo get_the_post_thumbnail_url(get_the_ID()) ?>" />
             <meta name="description" content="<?php echo get_the_content() ?>" />
             <link rel="alternate" type="application/rdf+xml" href="<?php echo get_the_permalink(); ?>?.rdf">
-            <?php $_GOOGLE_API_KEY = "AIzaSyBZXPZcDMGeT-CDugrsYWn6D0PQSnq_odg"; ?>
             <script src="https://maps.googleapis.com/maps/api/js?key=<?php echo $_GOOGLE_API_KEY; ?>" async></script>
-            
+
             <?php if (is_restful_active()) { ?>
                 <link rel="alternate" type="application/json" href="<?php echo site_url() . '/wp-json/posts/' . get_the_ID() . '/?type=socialdb_collection' ?>">
             <?php }
@@ -84,7 +83,7 @@ $_header_enabled = get_post_meta($collection_id, 'socialdb_collection_show_heade
                 <?php } ?>
 
             </div> <!-- /.navbar header -->
-            
+
             <?php get_template_part("partials/actions", "header"); ?>
 
         </div> <!-- /.container-fluid -->

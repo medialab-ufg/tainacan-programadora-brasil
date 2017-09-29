@@ -1,6 +1,6 @@
 <?php
 $front = [ 'config' => get_option('show_on_front'), 'page' => get_option('page_on_front')];
-get_header();
+get_template_part("header","front");
 ?>
 <div class="container no-padding">
     <header class="banner">
@@ -20,7 +20,7 @@ get_header();
                 shankle landjaeger.
             </span>
         </div>
-        
+
     </header>
 </div>
     <?php
@@ -42,7 +42,7 @@ get_header();
         <h4 class="home-type-title">Itens em Destaque</h4>
         <div class="home-container carousel-home">
 
-            <?php 
+            <?php
                 $child_items =  wp_get_recent_posts( [ 'post_type' => 'socialdb_object', 'numberposts' => -1] );
             foreach ($child_items as $item):
                 if ( is_array($item) && !empty($item) ):
@@ -92,4 +92,5 @@ get_header();
 <?php }
 //var_dump($child_items);
 get_template_part("partials/setup","header");
-get_footer();
+
+get_template_part("footer","front");
