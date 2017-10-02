@@ -1,6 +1,6 @@
 jQuery(document).ready(function() {
     $('.carousel-home').slick({
-  autoplay: true,
+  autoplay: false,
   slidesToShow: 4,
   slidesToScroll: 1,
   infinite: true,
