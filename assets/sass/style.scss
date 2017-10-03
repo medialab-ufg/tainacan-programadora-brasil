@@ -41,7 +41,7 @@ body{
         header{
             height: 80vh;
             &.banner{
-                background-image: url(assets/capafilmecultura52frente.jpg);
+                background-image: url(assets/images/capafilmecultura52frente.jpg);
                 background-position: top center;
                 background-size: 100% 250% !important;
                 @media only screen {
@@ -52,10 +52,8 @@ body{
                 .especificacao{
                     background-color: rgba(0, 0, 0, 0.48);
                     color: #fff;
-                    padding: 2%;
+                    padding: 2% 1% 1% 2%;
                     position: relative;
-                    /* right: 0; */
-                    /* padding-right: 26.4vh; */
                     top: 30vh;
                     width: 43%;
                     float: right;
@@ -84,13 +82,11 @@ body{
                             size: 3em;
                             weight: 900;
                         }
-                        margin-bottom: -15px;
+                        margin-bottom: -6px;
                     }
                     .sub-title{
                         color: #fff;
-                        font: {
-                            size: 1.7em;
-                        }
+                        white-space: pre-line;
                     }
                 }
             }

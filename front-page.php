@@ -6,24 +6,12 @@ get_template_part("header","front");
     <header class="banner">
         <div class="especificacao">
             <p class="title"><?php bloginfo('name') ?></p>
-            <p class="sub-title"><?php bloginfo('description') ?></p>
-            <span>
-                Bacon ipsum dolor amet beef turkey cupim porchetta sausage chicken jerky
-                bresaola. Sausage cow swine ham hock rump meatloaf. Brisket capicola meatball,
-                short loin beef ribs turkey ground round leberkas porchetta ball tip prosciutto
-                turducken. Cow strip steak t-bone ham hock leberkas, meatball doner corned beef
-                swine.
-                Pork loin venison ham leberkas ground round. Kevin pancetta boudin alcatra strip
-                steak porchetta ground round bilton`tg. Bresaola ank andouille kielbasa picanha
-                porchetta, t-bone ham hock salami pork rump ground round strip steak pork belly
-                meatball. Meatball t-bone pancetta shoulder. Frankfurter pork sirloin pork chop
-                shankle landjaeger.
-            </span>
+            <span class="sub-title"><?php nl2br(bloginfo('description')) ?></span>
         </div>
 
     </header>
 </div>
-    <?php
+<?php
 // Se usuário escolheu uma página para ser a Home
  if( "page" === $front['config'] ) {
      $_menu_ = ['container_class' => 'container', 'container' => false, 'walker' => new wp_bootstrap_navwalker(), 'menu_class' => 'navbar navbar-inverse menu-ibram'];
