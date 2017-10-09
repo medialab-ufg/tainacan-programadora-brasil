@@ -38,7 +38,7 @@ get_template_part("header","front");
         <div class="home-container carousel-home">
 
             <?php
-                $child_items =  wp_get_recent_posts( [ 'post_type' => 'socialdb_object', 'numberposts' => -1, 'orderby' => 'post_title', 'order' => 'DESC'] );
+                $child_items =  wp_get_recent_posts( [ 'post_type' => 'socialdb_object', 'numberposts' => -1, 'post_status' => 'publish', 'orderby' => 'post_title', 'order' => 'DESC'] );
             foreach ($child_items as $item):
                 if ( is_array($item) && !empty($item) ):
                     ?>
