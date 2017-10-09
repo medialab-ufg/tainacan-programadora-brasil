@@ -38,7 +38,7 @@ get_template_part("header","front");
         <div class="home-container carousel-home">
 
             <?php
-                $child_items =  wp_get_recent_posts( [ 'post_type' => 'socialdb_object', 'numberposts' => -1] );
+                $child_items =  wp_get_recent_posts( [ 'post_type' => 'socialdb_object', 'numberposts' => -1, 'orderby' => 'post_title', 'order' => 'DESC'] );
             foreach ($child_items as $item):
                 if ( is_array($item) && !empty($item) ):
                     ?>
@@ -65,7 +65,7 @@ get_template_part("header","front");
                                                 ?>
                                                 <?php if ( has_post_thumbnail($item['ID']) ) : ?>
                                                     <a href="<?php echo $item['guid']; ?>">
-                                                        <img src="<?php echo get_the_post_thumbnail_url($item['ID']) ?>" alt="" class="img_responsive">
+                                                        <?php echo get_the_post_thumbnail( $item['ID'], 'medium'); ?>
                                                     </a>
                                                 <?php endif; ?>
                                             </a>
