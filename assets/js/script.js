@@ -1,9 +1,10 @@
 jQuery(document).ready(function() {
     $('.carousel-home').slick({
   autoplay: true,
+  autoplaySpeed: 20000,
   slidesToShow: 4,
   slidesToScroll: 1,
-  infinite: true,
+  infinite: false,
   responsive: [
     {
       breakpoint: 1024,
@@ -33,4 +34,5 @@ jQuery(document).ready(function() {
     // instead of a settings object
   ]
 });
+console.log($('.carousel-home').slick());
 });

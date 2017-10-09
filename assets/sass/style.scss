@@ -35,13 +35,13 @@ body{
 
         .navbar{
             .container{
-                background: rgba(0, 0, 0, 0.60);
+                background: rgba(0, 0, 0, 0.85);
             }
         }
         header{
             height: 80vh;
             &.banner{
-                background-image: url(assets/images/capafilmecultura52frente.jpg);
+                background-image: url(assets/images/banner.jpeg);
                 background-position: top center;
                 @media only screen {
                     @media (max-width: 768px){
