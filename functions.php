@@ -31,32 +31,31 @@ function objetos_metabox_callback(){
     wp_nonce_field( $post->ID, 'objetos_metabox_nonce' );
     $relacionados =  wp_get_recent_posts( [ 'post_type' => 'socialdb_object', 'numberposts' => -1, 'post_status' => 'publish', 'orderby' => 'post_title', 'order' => 'DESC'] );
     $stored_meta = get_post_meta( $post->ID, 'objetos_metabox' );
-    //$highlighted = $stored_meta >= 1 ?  "checked" : "";
     ?>
     <div>
-    <?php
-        $count = count($stored_meta[0][0]) - 1;
-        foreach ($relacionados as $rel) {
-        //var_dump($relacionados); die;
-        ?>   
-            <input type="checkbox" name="objetos_metabox[]" id="objetos_<?php echo $rel['ID']; ?>" value="<?php echo $rel['ID']; ?>" 
-                <?php 
-                    if(isset($stored_meta[0][0])) {
-                        for($x=0; $x<=$count; $x++){
-                            checked( $stored_meta[0][0][$x], $rel['ID'] );
-                        }
-                    }
-                ?>
-            > 
-            <label for="objetos_<?php echo $rel['ID']; ?>" style="margin-top: 5px; margin-bottom: 1px;">
-                <?php echo $rel['post_title']; ?>
-            </label>
-            <br>
         <?php
-        }
-    ?>
+            foreach ($relacionados as $rel) {
+            //var_dump($relacionados); die;
+            ?>   
+                <input type="checkbox" name="objetos_metabox[]" id="objetos_<?php echo $rel['ID']; ?>" value="<?php echo $rel['ID']; ?>" 
+                    <?php 
+                        if(isset($stored_meta[0][0])) {
+                            $count = count($stored_meta[0][0]) - 1;
+                            for($x=0; $x<=$count; $x++){
+                                checked( $stored_meta[0][0][$x], $rel['ID'] );
+                            }
+                        }
+                    ?>
+                > 
+                <label for="objetos_<?php echo $rel['ID']; ?>" style="margin-top: 5px; margin-bottom: 1px;">
+                    <?php echo $rel['post_title']; ?>
+                </label>
+                <br>
+            <?php
+            }
+        ?>
     </div>
-    <?php
+<?php
 }
 
 function objetos_metabox_save( $post_id ) {
@@ -78,3 +77,50 @@ function objetos_metabox_save( $post_id ) {
  
 }
 add_action( 'save_post', 'objetos_metabox_save' );
+
+//Criando o hook
+function objetos_hook(){
+    do_action( 'header_sidebar_item' );
+}
+
+//função que retorna o resultado dos post meta pelo meta_key
+function tainacan_fc_get_post_meta($meta_key) {
+    global $wpdb;
+    $query = "SELECT * FROM $wpdb->postmeta WHERE meta_key = '$meta_key'";
+    $result = $wpdb->get_results($query);
+    if ($result &&  is_array($result)) {
+        return $result;
+    } elseif ($result && isset($result->ID)) {
+        return $result;
+    } else {
+        return false;
+    }
+}
+
+
+function objetos_list($object_id){
+    $stored_meta = tainacan_fc_get_post_meta( 'objetos_metabox' );
+
+    if(!empty($stored_meta)){ ?>
+    
+        <h3 id="text_title">
+            <?php _e('Posts Relacionados', 'tainacan'); ?>
+            <br>
+        </h3>    
+        <hr>
+        <?php
+        foreach ($stored_meta as $meta) { //var_dump($value); ?>
+            <h4 style="border-bottom: 1px dashed #CCCCCC; padding-bottom: 8px; width: 80%; margin: 10px auto;">
+                <?php if(has_post_thumbnail( $meta->post_id )) { ?>    
+                    <img src="<?php echo get_the_post_thumbnail_url( $meta->post_id, $size = 'post-thumbnail' ); ?>" alt="" class="img-responsive" style="display: inline-block; max-width: 45px;"/>
+                <?php } ?>
+                <a href="<?php the_permalink( $value->post_id ); ?>" class="text-uppercase" style="color: black; font-weight: bold; font-size: 15px;">
+                    <?php echo get_the_title( $meta->post_id ); ?>
+                </a>
+            </h4>
+        <?php } ?>
+    <hr>
+    <?php }
+}
+
+add_action( 'header_sidebar_item', 'objetos_list');
