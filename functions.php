@@ -97,11 +97,30 @@ function tainacan_fc_get_post_meta($meta_key) {
     }
 }
 
+/*
+* Function que verifca se o objeto esta relacionado ao post no postmeta
+* @param $object_id id do objeto
+*/
+function has_relation($object_id){
+    $stored_meta = tainacan_fc_get_post_meta( 'objetos_metabox' );
+    foreach ($stored_meta as $value) {
+        $postmeta = get_post_meta( $value->post_id, 'objetos_metabox', true );
+
+        if($postmeta[0][0] == $object_id)
+            $x = true;
+        else
+            $x = false;
+    }
+    if($x)
+        return true;
+    else
+        return false;
+}
 
 function objetos_list($object_id){
     $stored_meta = tainacan_fc_get_post_meta( 'objetos_metabox' );
-
-    if(!empty($stored_meta)){ ?>
+    
+    if(!empty($stored_meta) && has_relation($object_id)){ ?>
     
         <h3 id="text_title">
             <?php _e('Posts Relacionados', 'tainacan'); ?>
@@ -109,7 +128,7 @@ function objetos_list($object_id){
         </h3>    
         <hr>
         <?php
-        foreach ($stored_meta as $meta) { //var_dump($value); ?>
+        foreach ($stored_meta as $meta) { ?>
             <h4 style="border-bottom: 1px dashed #CCCCCC; padding-bottom: 8px; width: 80%; margin: 10px auto;">
                 <?php if(has_post_thumbnail( $meta->post_id )) { ?>    
                     <img src="<?php echo get_the_post_thumbnail_url( $meta->post_id, $size = 'post-thumbnail' ); ?>" alt="" class="img-responsive" style="display: inline-block; max-width: 45px;"/>
@@ -117,7 +136,7 @@ function objetos_list($object_id){
                 <a href="<?php the_permalink( $value->post_id ); ?>" class="text-uppercase" style="color: black; font-weight: bold; font-size: 15px;">
                     <?php echo get_the_title( $meta->post_id ); ?>
                 </a>
-            </h4>
+            </h4> 
         <?php } ?>
     <hr>
     <?php }
