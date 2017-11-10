@@ -131,9 +131,9 @@ function objetos_list($object_id){
         foreach ($stored_meta as $meta) { ?>
             <h4 style="border-bottom: 1px dashed #CCCCCC; padding-bottom: 8px; width: 80%; margin: 10px auto;">
                 <?php if(has_post_thumbnail( $meta->post_id )) { ?>    
-                    <img src="<?php echo get_the_post_thumbnail_url( $meta->post_id, $size = 'post-thumbnail' ); ?>" alt="" class="img-responsive" style="display: inline-block; max-width: 45px;"/>
+                    <img src="<?php echo get_the_post_thumbnail_url( $meta->post_id, $size = 'post-thumbnail' ); ?>" alt="" class="img-responsive" style="display: inline-block; max-width: 45px; float: left; margin-right: 5px;"/>
                 <?php } ?>
-                <a href="<?php the_permalink( $meta->post_id ); ?>" class="text-uppercase" style="color: black; font-weight: bold; font-size: 15px;">
+                <a href="<?php the_permalink( $meta->post_id ); ?>" class="text-uppercase" style="color: black; font-weight: bold; font-size: 14px;">
                     <?php echo get_the_title( $meta->post_id ); ?>
                 </a>
             </h4> 
