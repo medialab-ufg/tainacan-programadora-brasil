@@ -32,7 +32,7 @@ function objetos_metabox_callback(){
     $relacionados =  wp_get_recent_posts( [ 'post_type' => 'socialdb_object', 'numberposts' => -1, 'post_status' => 'publish', 'orderby' => 'post_title', 'order' => 'DESC'] );
     $stored_meta = get_post_meta( $post->ID, 'objetos_metabox' );
     ?>
-    <div>
+    <div style="max-height: 201px; overflow: auto;">
         <?php
             foreach ($relacionados as $rel) {
             //var_dump($relacionados); die;
