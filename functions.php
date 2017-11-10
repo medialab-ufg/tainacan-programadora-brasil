@@ -133,7 +133,7 @@ function objetos_list($object_id){
                 <?php if(has_post_thumbnail( $meta->post_id )) { ?>    
                     <img src="<?php echo get_the_post_thumbnail_url( $meta->post_id, $size = 'post-thumbnail' ); ?>" alt="" class="img-responsive" style="display: inline-block; max-width: 45px;"/>
                 <?php } ?>
-                <a href="<?php the_permalink( $value->post_id ); ?>" class="text-uppercase" style="color: black; font-weight: bold; font-size: 15px;">
+                <a href="<?php the_permalink( $meta->post_id ); ?>" class="text-uppercase" style="color: black; font-weight: bold; font-size: 15px;">
                     <?php echo get_the_title( $meta->post_id ); ?>
                 </a>
             </h4> 
