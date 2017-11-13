@@ -34,7 +34,7 @@ function objetos_metabox_callback(){
     //var_dump($relacionados); die;
     ?>
     <div>
-        <select>
+        <select name="objetos_metabox">
             <?php
                 foreach ($relacionados as $rel) {
                 ?>   
@@ -114,12 +114,15 @@ function objetos_list($object_id){
 
 add_action( 'header_sidebar_item', 'objetos_list');
 
-/*function list_objects_in_single($content){
+function list_objects_in_single($content){
     global $post;
     $relacionados =  wp_get_recent_posts( [ 'post_type' => 'socialdb_object', 'numberposts' => -1, 'post_status' => 'publish', 'orderby' => 'post_title', 'order' => 'DESC'] );
     $stored_meta = get_post_meta( $post->ID, 'objetos_metabox' );
-    var_dump($stored_meta);
-    echo '<div style="position: absolute; top: 10px; right: 10px;">Post relacionado a '.$stored_meta[0][0][0].'</div>';
+
+    foreach($relacionados as $rel){
+        if($rel['ID'] == $stored_meta[0])
+            echo '<div style="position: absolute; top: 10px; right: 10px;">Post relacionado à <a href="'.$rel['guid'].'" style="font-weight: bold;">'.$rel['post_title'].'</a></div>';
+    }
     return $content;
 }
-add_filter( 'the_content', 'list_objects_in_single');*/
+add_filter( 'the_content', 'list_objects_in_single');
