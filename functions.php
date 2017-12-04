@@ -35,13 +35,10 @@ function objetos_metabox_callback(){
     ?>
     <div>
         <select name="objetos_metabox">
-            <?php
-                foreach ($relacionados as $rel) {
-                ?>   
-                    
-                        <option value="<?php echo $rel['ID']; ?>" <?php selected( $stored_meta[0], $rel['ID'] ); ?> > <?php echo $rel['post_title']; ?> </option>
-                    <br>
-                <?php } ?>
+            <option>Selecione um Item...</option>
+            <?php foreach ($relacionados as $rel) { ?>
+                <option value="<?php echo $rel['ID']; ?>" <?php selected( $stored_meta[0], $rel['ID'] ); ?> > <?php echo $rel['post_title']; ?> </option>
+            <?php } ?>
         </select>
     </div>
 <?php
