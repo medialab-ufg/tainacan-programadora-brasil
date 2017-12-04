@@ -1,0 +1,137 @@
+/*
+Theme Name: Tainacan Child
+Theme URI: https://github.com/l3pufg/tainacan
+Description: Tainacan - um projeto sociocultural em parceria da UFG com o MinC
+Author: L3P UFG
+Author URI: http://www.l3p.fic.ufg.br/
+Template: tainacan
+Version: 1.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Tags: tainacan, ufg, minc, cultura, flexible, open_source
+Text Domain: tainacan-child
+
+This theme, like WordPress, is licensed under the GPL.
+Use it to make something cool, have fun, and share what you've learned with others.
+*/
+body.home {
+  background: #525659 !important; }
+  body.home .navbar .container {
+    background: rgba(0, 0, 0, 0.85); }
+  body.home header {
+    height: 80vh; }
+    body.home header.banner {
+      background-image: url(assets/images/banner.jpeg);
+      background-position: top center; }
+@media only screen and (max-width: 768px) {
+  body.home header.banner {
+    background-size: 100% 105% !important; } }
+
+      body.home header.banner .especificacao {
+        background-color: rgba(0, 0, 0, 0.48);
+        color: #fff;
+        padding: 2% 1% 1% 2%;
+        position: relative;
+        top: 30vh;
+        width: 43%;
+        float: right; }
+@media only screen and (max-width: 767px) {
+  body.home header.banner .especificacao {
+    font-size: xx-small;
+    width: 70%; } }
+@media only screen and (width: 768px) {
+  body.home header.banner .especificacao {
+    width: 70%; } }
+        body.home header.banner .especificacao .title {
+          color: #fff;
+          font-weight: 900;
+          margin-bottom: -6px; }
+        body.home header.banner .especificacao .sub-title {
+          color: #fff;
+          white-space: pre-line; }
+  body.home #display_view_main_page_ {
+    background: #e6e7e8 !important;
+    padding: 30px 42px 0 42px !important;
+    margin-top: 0 !important; }
+    body.home #display_view_main_page_ .home-type-title:first-child {
+      border-left: 4px solid;
+      border-color: #77a6ce; }
+    body.home #display_view_main_page_ h4 {
+      color: black !important; }
+    body.home #display_view_main_page_ .type-container {
+      padding-left: 13px;
+      padding-right: 0; }
+    body.home #display_view_main_page_ .featured {
+      width: 215px !important; }
+      body.home #display_view_main_page_ .featured:first-child h4 {
+        border-left: 4px solid;
+        border-color: #77a6ce; }
+      body.home #display_view_main_page_ .featured:nth-child(2) h4 {
+        border-left: 4px solid;
+        border-color: #CAAD5B; }
+    body.home #display_view_main_page_ .image h4 {
+      border-left: 4px solid;
+      border-color: #91597D; }
+    body.home #display_view_main_page_ .video h4 {
+      border-left: 4px solid;
+      border-color: #368B53; }
+    body.home #display_view_main_page_ .pdf h4 {
+      border-left: 4px solid;
+      border-color: #874A1D; }
+    body.home #display_view_main_page_ .audio h4 {
+      border-left: 4px solid;
+      border-color: #7654A0; }
+    body.home #display_view_main_page_ .text h4 {
+      border-left: 4px solid;
+      border-color: #BDD5B2; }
+    body.home #display_view_main_page_ .home-title {
+      padding: 0px 5px; }
+      body.home #display_view_main_page_ .home-title a {
+        color: black;
+        font-weight: 900;
+        font-size: 11px; }
+    body.home #display_view_main_page_ .home-type-title {
+      color: white;
+      text-align: left;
+      padding-left: 8px;
+      margin: 0 0 20px 0; }
+  body.home .carousel-home .item-box-container {
+    display: inline-block; }
+  body.home .carousel-home .panel {
+    width: 205px;
+    height: 270px;
+    background: #f5f5f5; }
+    body.home .carousel-home .panel .panel-body {
+      height: 268px;
+      background: white;
+      padding: 0; }
+      body.home .carousel-home .panel .panel-body a img {
+        width: 100%;
+        max-height: 100%;
+        margin: 0 auto; }
+      body.home .carousel-home .panel .panel-body span .collection-name {
+        font-size: 15px; }
+    body.home .carousel-home .panel .panel-footer {
+      height: auto;
+      overflow: hidden; }
+  body.home .carousel-home button {
+    height: 216px;
+    width: 41px; }
+    body.home .carousel-home button.slick-prev, body.home .carousel-home button.slick-next {
+      top: 14%;
+      z-index: 2; }
+      body.home .carousel-home button.slick-prev:before, body.home .carousel-home button.slick-next:before {
+        content: ''; }
+    body.home .carousel-home button.slick-prev {
+      left: -32px;
+      border-radius: 4px 0 0 10px;
+      background: url(assets/images/seta-left.png) no-repeat; }
+    body.home .carousel-home button.slick-next {
+      right: 0;
+      border-radius: 0 4px 10px 0;
+      background: url(assets/images/seta.png) no-repeat; }
+@media only screen and (min-width: 768px) {
+  body.home .carousel-home button.slick-next {
+    right: -37px; } }
+
+/*# sourceMappingURL=style.css.map */
