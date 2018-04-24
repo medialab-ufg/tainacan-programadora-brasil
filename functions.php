@@ -1,4 +1,21 @@
 <?php
+
+if(!function_exists('theme_child_setup')) {
+    function theme_child_setup() {
+        //Alterar Header
+        $header_args = array(
+            'default-image'      => get_theme_file_uri('/assets/images/header.jpg'),
+            'default-text-color' => 'fff',
+            'header-text'		 => true,
+            'flex-width'         => false,
+            'flex-height'        => true,
+        );
+        add_theme_support( 'custom-header', $header_args );
+    }
+}
+add_action( 'after_setup_theme', 'theme_child_setup' );
+
+
 function theme_enqueue_styles() {
 
     $parent_style = 'parent-style';

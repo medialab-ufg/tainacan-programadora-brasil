@@ -3,7 +3,7 @@ $front = [ 'config' => get_option('show_on_front'), 'page' => get_option('page_o
 get_template_part("header","front");
 ?>
 <div class="container no-padding">
-    <header class="banner">
+    <header class="banner" style="background-image: url('<?php header_image(); ?>'); ">
         <div class="especificacao">
             <h1 class="title hide"><?php bloginfo('name') ?></h1>
             <span class="sub-title"><?php nl2br(bloginfo('description')) ?></span>
@@ -39,6 +39,7 @@ get_template_part("header","front");
 
             <?php
                 $child_items =  wp_get_recent_posts( [ 'post_type' => 'socialdb_object', 'numberposts' => -1, 'post_status' => 'publish', 'orderby' => 'post_title', 'order' => 'DESC'] );
+                //var_dump($child_items);die;
             foreach ($child_items as $item):
                 if ( is_array($item) && !empty($item) ):
                     ?>
