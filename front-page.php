@@ -29,7 +29,7 @@ get_template_part("header","front");
     <div id="display_view_main_page_" class="container">
         <div class="row">
             <div class="col-xs-6 no-padding">
-                <h4 class="home-type-title">Edições da Revista</h4>
+                <h4 class="home-type-title">Carmen Santos</h4>
             </div>
             <div class="col-xs-6 no-padding">
                 <h5 cass="pull-right" style="text-align: right;"><a href="<?php echo get_site_url(); ?>/colecao/filme-cultura/">Busca avançada</a></h5> 
