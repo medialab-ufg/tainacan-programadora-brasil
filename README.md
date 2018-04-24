@@ -1,7 +1,7 @@
-# Tainacan Filme Cultura
+# Tainacan Programadora Brasil
 
 Tema filho para uso com o Tainacan.<br />
-Tema Criado para o Filme Cultura<br />
+Tema Criado para Programadora Brasil<br />
 <br />
 Para o uso do mesmo é necessario renomear o nome da pasta para {<strong>NOMEDOTEMA</strong>}-child.<br />
 <br />
