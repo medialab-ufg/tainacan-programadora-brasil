@@ -42,7 +42,7 @@ body{
             height: 80vh;
             &.banner{
                 //background-image: url(assets/images/header.jpg);
-                background-position: top center;
+                background-position: center center;
                 @media only screen {
                     @media (max-width: 768px){
                         background-size: 100% 105% !important;
