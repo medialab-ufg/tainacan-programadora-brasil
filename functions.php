@@ -4,7 +4,7 @@ if(!function_exists('theme_child_setup')) {
     function theme_child_setup() {
         //Alterar Header
         $header_args = array(
-            'default-image'      => get_theme_file_uri('/assets/images/header.png'),
+            'default-image'      => '',
             'default-text-color' => 'fff',
             'header-text'		 => true,
             'flex-width'         => false,
