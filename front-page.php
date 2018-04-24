@@ -38,49 +38,33 @@ get_template_part("header","front");
         <div class="home-container carousel-home">
 
             <?php
-                $child_items =  wp_get_recent_posts( [ 'post_type' => 'socialdb_object', 'numberposts' => -1, 'post_status' => 'publish', 'orderby' => 'post_title', 'order' => 'DESC'] );
-                //var_dump($child_items);die;
-            foreach ($child_items as $item):
-                if ( is_array($item) && !empty($item) ):
+                $carmen =  get_children( array('post_parent' => 38) );
+                //$filmes =  get_children( array('post_parent' => 24) );
+                //var_dump($child_post);die;
+                //$child_items =  wp_get_recent_posts( [ 'post_type' => 'socialdb_object', 'numberposts' => -1, 'post_status' => 'publish', 'orderby' => 'post_title', 'order' => 'DESC'] );
+            foreach ($carmen as $item):
                     ?>
                     <div class="col-md-12 col-sm-12 featured" style="width: 215px !important;">
                         <div class="col-md-12 col-sm-12 blocos">
                                 <div class="item-individual-box">
                                     <div class="panel panel-default">
-                                        <div class="panel-body">
-                                            <a href="<?php echo $item['guid']; ?>">
-                                                <?php
-                                                /* $item_id = $item['ID'];
-                                                $output = "";
-                                                $collection_name = explode(" ", $item['post_title']);
-                                                if (has_post_thumbnail($item_id)):
-                                                    $output = get_item_thumb_image($item_id);
-                                                endif;
-                                                if (empty($output)) {
-                                                    echo '<div class="tainacan-thumbless">';
-                                                        format_home_items_char($collection_name[0]) . format_home_items_char($collection_name[1]);
-                                                    echo '</div>';
-                                                } else {
-                                                    echo $output;
-                                                } */
-                                                ?>
-                                                <?php if ( has_post_thumbnail($item['ID']) ) : ?>
-                                                    <a href="<?php echo $item['guid']; ?>">
-                                                        <?php echo get_the_post_thumbnail( $item['ID'], 'medium'); ?>
-                                                    </a>
-                                                <?php endif; ?>
-                                            </a>
-                                        </div>
+                                        <?php if ( has_post_thumbnail($item->ID) ) : ?>
+                                            <div class="panel-body">
+                                                <a href="<?php echo $item->guid; ?>">
+                                                    <?php echo get_the_post_thumbnail( $item->ID, 'medium'); ?>
+                                                </a>
+                                            </div>
+                                        <?php endif; ?>
                                         <div class="panel-footer home-title">
-                                            <a href="<?php echo $item['guid']; ?>">
-                                                <span class="collection-name"> <?php echo wp_trim_words($item['post_title'], 20) ?> </span>
+                                            <a href="<?php echo $item->guid; ?>">
+                                                <span class="collection-name"> <?php echo wp_trim_words($item->post_title, 20) ?> </span>
                                             </a>
                                         </div>
                                     </div>
                                 </div>
                         </div>
                     </div>
-                <?php endif;
+                <?php
             endforeach; ?>
         </div>
     </div>
