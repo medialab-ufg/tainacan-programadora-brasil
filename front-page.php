@@ -38,7 +38,7 @@ get_template_part("header","front");
         <div class="home-container carousel-home">
 
             <?php
-                $carmen =  get_children( array('post_parent' => 38) );
+                $carmen =  get_children( array('post_parent' => 40) );
                 //$filmes =  get_children( array('post_parent' => 24) );
                 //var_dump($child_post);die;
                 //$child_items =  wp_get_recent_posts( [ 'post_type' => 'socialdb_object', 'numberposts' => -1, 'post_status' => 'publish', 'orderby' => 'post_title', 'order' => 'DESC'] );
@@ -48,13 +48,15 @@ get_template_part("header","front");
                         <div class="col-md-12 col-sm-12 blocos">
                                 <div class="item-individual-box">
                                     <div class="panel panel-default">
-                                        <?php if ( has_post_thumbnail($item->ID) ) : ?>
-                                            <div class="panel-body">
-                                                <a href="<?php echo $item->guid; ?>">
+                                        <div class="panel-body">
+                                            <a href="<?php echo $item->guid; ?>">
+                                                <?php if ( has_post_thumbnail($item->ID) ) : ?>
                                                     <?php echo get_the_post_thumbnail( $item->ID, 'medium'); ?>
-                                                </a>
-                                            </div>
-                                        <?php endif; ?>
+                                                <?php else : ?>
+                                                    <img src="<?php echo get_stylesheet_directory_uri().'/assets/images/header.png'; ?>">
+                                                <?php endif; ?>
+                                            </a>
+                                        </div>
                                         <div class="panel-footer home-title">
                                             <a href="<?php echo $item->guid; ?>">
                                                 <span class="collection-name"> <?php echo wp_trim_words($item->post_title, 20) ?> </span>
