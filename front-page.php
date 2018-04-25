@@ -37,7 +37,7 @@ get_template_part("header","front");
         </div>
         <div class="home-container carousel-home">
             <?php
-                $carmen =  get_children( array('post_parent' => 24) );
+                $carmen =  get_children( array('post_parent' => 24, 'numberposts' => 500) );
                 //var_dump($child_post);die;
                 //$child_items =  wp_get_recent_posts( [ 'post_type' => 'socialdb_object', 'numberposts' => -1, 'post_status' => 'publish', 'orderby' => 'post_title', 'order' => 'DESC'] );
                 foreach ($carmen as $item):
