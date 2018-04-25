@@ -61,7 +61,7 @@ body.home {
       padding-left: 13px;
       padding-right: 0; }
     body.home #display_view_main_page_ .featured {
-      width: 215px !important; }
+      width: 215px; }
       body.home #display_view_main_page_ .featured:first-child h4 {
         border-left: 4px solid;
         border-color: #77a6ce; }

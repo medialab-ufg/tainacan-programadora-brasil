@@ -108,7 +108,7 @@ body{
             }
 
             .featured {
-                width: 215px !important;
+                width: 215px;
                 &:first-child {
                     @include set-home-title-color($populars);
                 }
