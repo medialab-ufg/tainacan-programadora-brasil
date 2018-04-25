@@ -113,9 +113,9 @@ body.home {
     body.home .carousel-home .panel .panel-footer {
       height: auto;
       overflow: hidden; }
-  body.home .carousel-home .panel.carmen {
+  body.home .carousel-home .panel.filmes {
     height: auto; }
-    body.home .carousel-home .panel.carmen .panel-body {
+    body.home .carousel-home .panel.filmes .panel-body {
       height: auto; }
   body.home .carousel-home button {
     height: 216px;
@@ -137,7 +137,7 @@ body.home {
   body.home .carousel-home button.slick-next {
     right: -37px; } }
 
-  body.home .carousel-home.carmensantos button.slick-prev, body.home .carousel-home.carmensantos button.slick-next {
+  body.home .carousel-home.catalogofilmes button.slick-prev, body.home .carousel-home.catalogofilmes button.slick-next {
     top: -12%; }
 
 /*# sourceMappingURL=style.css.map */
