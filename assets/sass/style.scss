@@ -191,7 +191,7 @@ body{
             } // .panel
 
             .panel{
-                &.carmen{
+                &.filmes{
                     height: auto;
                     .panel-body{
                         height: auto;
@@ -232,7 +232,7 @@ body{
         } // carousel home
 
         .carousel-home{
-            &.carmensantos{
+            &.catalogofilmes{
                 button{
                     &.slick-prev, &.slick-next {
                         top: -12%;
