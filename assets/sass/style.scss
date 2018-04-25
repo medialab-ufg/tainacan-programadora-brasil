@@ -234,6 +234,12 @@ body{
 
         .carousel-home{
             &.catalogofilmes{
+                .featured{
+                    width: 272px !important;
+                    .panel{
+                        width: 266px;
+                    }
+                }
                 button{
                     &.slick-prev, &.slick-next {
                         top: -12%;

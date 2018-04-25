@@ -138,6 +138,10 @@ body.home {
   body.home .carousel-home button.slick-next {
     right: -37px; } }
 
+  body.home .carousel-home.catalogofilmes .featured {
+    width: 272px !important; }
+    body.home .carousel-home.catalogofilmes .featured .panel {
+      width: 266px; }
   body.home .carousel-home.catalogofilmes button.slick-prev, body.home .carousel-home.catalogofilmes button.slick-next {
     top: -12%; }
 
