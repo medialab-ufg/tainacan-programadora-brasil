@@ -106,9 +106,16 @@ body{
                 padding-left: 13px;
                 padding-right: 0;
             }
-
+            .catalogofilmes{
+                .featured{
+                    width: 272px !important;
+                    .panel{
+                        width: 266px;
+                    }
+                }
+            }
             .featured {
-                width: 215px;
+                width: 215px !important;
                 &:first-child {
                     @include set-home-title-color($populars);
                 }
@@ -234,12 +241,6 @@ body{
 
         .carousel-home{
             &.catalogofilmes{
-                .featured{
-                    width: 272px !important;
-                    .panel{
-                        width: 266px;
-                    }
-                }
                 button{
                     &.slick-prev, &.slick-next {
                         top: 0%;

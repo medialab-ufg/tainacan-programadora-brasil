@@ -60,8 +60,12 @@ body.home {
     body.home #display_view_main_page_ .type-container {
       padding-left: 13px;
       padding-right: 0; }
+    body.home #display_view_main_page_ .catalogofilmes .featured {
+      width: 272px !important; }
+      body.home #display_view_main_page_ .catalogofilmes .featured .panel {
+        width: 266px; }
     body.home #display_view_main_page_ .featured {
-      width: 215px; }
+      width: 215px !important; }
       body.home #display_view_main_page_ .featured:first-child h4 {
         border-left: 4px solid;
         border-color: #77a6ce; }
@@ -138,10 +142,6 @@ body.home {
   body.home .carousel-home button.slick-next {
     right: -37px; } }
 
-  body.home .carousel-home.catalogofilmes .featured {
-    width: 272px !important; }
-    body.home .carousel-home.catalogofilmes .featured .panel {
-      width: 266px; }
   body.home .carousel-home.catalogofilmes button.slick-prev, body.home .carousel-home.catalogofilmes button.slick-next {
     top: 0%; }
 
