@@ -32,7 +32,7 @@ get_template_part("header","front");
                 <h4 class="home-type-title">Filmes Edital Carmen Santos</h4>
             </div>
             <div class="col-xs-6 no-padding">
-                <h5 cass="pull-right" style="text-align: right;"><a href="<?php echo get_site_url(); ?>/colecao/filmes-edital-carmem-santos/">Busca avançada</a></h5> 
+                <h5 cass="pull-right" style="text-align: right;"><a href="<?php echo get_site_url(); ?>/colecao/filmes-edital-carmem-santos/">Ver tudo</a></h5> 
             </div>
         </div>
         <div class="home-container carousel-home">
@@ -72,7 +72,7 @@ get_template_part("header","front");
                 <h4 class="home-type-title">Catálogo de Filmes</h4>
             </div>
             <div class="col-xs-6 no-padding">
-                <h5 cass="pull-right" style="text-align: right;"><a href="<?php echo get_site_url(); ?>/colecao/catalogo-de-filmes/">Busca avançada</a></h5> 
+                <h5 cass="pull-right" style="text-align: right;"><a href="<?php echo get_site_url(); ?>/colecao/catalogo-de-filmes/">Ver tudo</a></h5> 
             </div>
         </div>
         <div class="home-container carousel-home catalogofilmes">
