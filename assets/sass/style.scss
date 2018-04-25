@@ -160,12 +160,12 @@ body{
 
             .panel {
                 width: 205px;
-                height: 270px;
+                height: auto;
                 background: #f5f5f5;
 
                 .panel-body {
                     // padding: 10px !important;
-                    height: 268px;
+                    height: auto;
                     background: white;
                     padding: 0;
                     a {

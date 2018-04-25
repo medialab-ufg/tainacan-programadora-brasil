@@ -98,10 +98,10 @@ body.home {
     display: inline-block; }
   body.home .carousel-home .panel {
     width: 205px;
-    height: 270px;
+    height: auto;
     background: #f5f5f5; }
     body.home .carousel-home .panel .panel-body {
-      height: 268px;
+      height: auto;
       background: white;
       padding: 0; }
       body.home .carousel-home .panel .panel-body a img {
