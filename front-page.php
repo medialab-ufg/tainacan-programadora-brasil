@@ -77,7 +77,7 @@ get_template_part("header","front");
         </div>
         <div class="home-container carousel-home catalogofilmes">
             <?php
-                $filmes =  get_children( array('post_parent' => 38, 'numberposts' => 500, 'orderby' => 'rand', 'post_type' => 'socialdb_object', 'post_status' => 'publish') );
+                $filmes =  get_children( array('post_parent' => 38, 'numberposts' => 500, 'orderby' => 'rand', 'post_type' => 'socialdb_object', 'post_status' => 'publish', 'meta_key' => 'socialdb_property_2377', 'meta_value' => 'Sim') );
                 foreach ($filmes as $item):
                     ?>
                     <div class="col-md-12 col-sm-12 featured">
