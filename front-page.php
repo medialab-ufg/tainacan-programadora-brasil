@@ -45,7 +45,7 @@ get_template_part("header","front");
                     <div class="col-md-12 col-sm-12 featured" style="width: 215px !important;">
                         <div class="col-md-12 col-sm-12 blocos">
                             <div class="item-individual-box">
-                                <div class="panel panel-default">
+                                <div class="panel panel-default carmen">
                                     <div class="panel-body">
                                         <a href="<?php echo $item->guid; ?>">
                                             <?php if ( has_post_thumbnail($item->ID) ) : ?>

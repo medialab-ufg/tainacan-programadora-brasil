@@ -98,10 +98,10 @@ body.home {
     display: inline-block; }
   body.home .carousel-home .panel {
     width: 205px;
-    height: auto;
+    height: 270px;
     background: #f5f5f5; }
     body.home .carousel-home .panel .panel-body {
-      height: auto;
+      height: 268px;
       background: white;
       padding: 0; }
       body.home .carousel-home .panel .panel-body a img {
@@ -113,6 +113,10 @@ body.home {
     body.home .carousel-home .panel .panel-footer {
       height: auto;
       overflow: hidden; }
+  body.home .carousel-home .panel.carmen {
+    height: auto; }
+    body.home .carousel-home .panel.carmen .panel-body {
+      height: auto; }
   body.home .carousel-home button {
     height: 216px;
     width: 41px; }

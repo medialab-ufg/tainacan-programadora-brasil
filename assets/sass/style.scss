@@ -157,15 +157,14 @@ body{
             .item-box-container {
                 display: inline-block;
             }
-
             .panel {
                 width: 205px;
-                height: auto;
+                height: 270px;
                 background: #f5f5f5;
 
                 .panel-body {
                     // padding: 10px !important;
-                    height: auto;
+                    height: 268px;
                     background: white;
                     padding: 0;
                     a {
@@ -191,6 +190,14 @@ body{
 
             } // .panel
 
+            .panel{
+                &.carmen{
+                    height: auto;
+                    .panel-body{
+                        height: auto;
+                    }
+                }
+            }
             button {
                 height: 216px;
                 width: 41px;
