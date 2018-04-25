@@ -137,4 +137,7 @@ body.home {
   body.home .carousel-home button.slick-next {
     right: -37px; } }
 
+  body.home .carousel-home.carmensantos button.slick-prev, body.home .carousel-home.carmensantos button.slick-next {
+    top: -12%; }
+
 /*# sourceMappingURL=style.css.map */

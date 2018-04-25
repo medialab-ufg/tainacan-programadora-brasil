@@ -230,5 +230,15 @@ body{
 
             }
         } // carousel home
+
+        .carousel-home{
+            &.carmensantos{
+                button{
+                    &.slick-prev, &.slick-next {
+                        top: -12%;
+                    }
+                }
+            }
+        }
     }
 }

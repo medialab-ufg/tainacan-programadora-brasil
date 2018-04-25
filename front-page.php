@@ -35,7 +35,7 @@ get_template_part("header","front");
                 <h5 cass="pull-right" style="text-align: right;"><a href="<?php echo get_site_url(); ?>/colecao/filme-cultura/">Busca avançada</a></h5> 
             </div>
         </div>
-        <div class="home-container carousel-home">
+        <div class="home-container carousel-home carmensantos">
             <?php
                 $carmen =  get_children( array('post_parent' => 38) );
                 //var_dump($child_post);die;
